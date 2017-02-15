@@ -15,7 +15,7 @@
 		<td><%= user.email %></td>
 		<td><%= user.name %></td>
 		<td><%= user.fav_game %></td>
-		<td> link to </td>
+		<td><%= link_to "Edit", edit_user_path(user.id) %></td>
 	</tr>
 
 	<% end %>

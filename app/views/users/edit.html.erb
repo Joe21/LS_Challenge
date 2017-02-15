@@ -1,1 +1,17 @@
-<h1>Edit page</h1>
+<h1>Edit User <%= @user.id %></h1>
+
+<%= form_for @user do |form| %>
+	<div>
+		<div>Email</div>
+		<div><%= form.text_field :email, readonly: true %></div>
+	</div>
+	<div>
+		<div>Name</div>
+		<div><%= form.text_field :name %></div>
+	</div>
+	<div>
+		<div>Favorite Game</div>
+		<div><%= form.text_field :fav_game %></div>
+	</div>
+	<%= form.submit %>
+<% end %>
