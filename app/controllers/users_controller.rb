@@ -3,9 +3,20 @@ class UsersController < ApplicationController
 
 	def index
 		print "------------"
-		print "backend user controller index action working"
+		print "index action working"
 		print "------------"
 	end
 
+	def edit
+		print "------------"
+		print "edit action working"
+		print "------------"
+	end
+
+	def update
+		print "------------"
+		print "update action working"
+		print "------------"
+	end
 
 end
