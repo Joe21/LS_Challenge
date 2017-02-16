@@ -17,10 +17,6 @@ class UsersController < ApplicationController
 		end
 	end
 
-	def chart_data
-		
-	end
-
 	# --------------------------------------------------------
 	private
 
