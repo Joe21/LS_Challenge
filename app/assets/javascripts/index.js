@@ -1,11 +1,10 @@
 //= require Chart.min
 $(document).ready(function() {
 	console.log('index working');
-	signUpChart()
+	signUpChartAjax()
 })
 
-
-function signUpChart() {
+function signUpChartAjax() {
 	var request = $.ajax({
 	  url: '/api/v1/sign_up_chart',
 	  method: 'GET',
@@ -17,3 +16,7 @@ function signUpChart() {
 	  }
 	});
 }
+
+// function buildSignUpChart(data) {
+	
+// }
