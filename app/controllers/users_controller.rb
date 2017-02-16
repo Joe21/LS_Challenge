@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	before_action :return_user, only: [:edit, :update]
 
 	def index
+		# ensure editted users do not overlap order vs .all
 		@users = User.order(id: :asc)
 	end
 
