@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 function signUpChart() {
 	var request = $.ajax({
-	  url: '/api/v1',
+	  url: '/api/v1/sign_up_chart',
 	  method: 'GET',
 	  dataType: 'json',
 	  success: function(data) {

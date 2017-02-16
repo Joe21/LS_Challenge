@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
+  # namespace :api, :path => "/api", :defaults => {:format => :json} do
+  #   namespace :v1 do
+  #     get '/sign_up_chart' => 'charts#sign_up_chart'
+  #   end
+  # end
+
   # Rake Routes
   #                     root GET    /                              users#index
   #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
