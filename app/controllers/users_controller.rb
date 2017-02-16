@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 	before_action :return_user, only: [:edit, :update]
 
 	def index
-		@users = User.order('id ASC')
+		@users = User.order(id: :asc)
 	end
 
 	def edit

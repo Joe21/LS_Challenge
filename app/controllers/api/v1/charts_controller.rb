@@ -6,6 +6,11 @@ module Api::V1
 			puts "------------------------------"
 			puts "this is being hit on the back"
 			puts "------------------------------"
+
+			query = User.order(created_at: :desc)
+
+
+
 		end
 
 
