@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  # namespace :api, :path => "/api", :defaults => {:format => :json} do
-  #   namespace :v1 do
-  #     get '/sign_up_chart' => 'charts#sign_up_chart'
-  #   end
-  # end
+  namespace :api, :defaults => {:format => :json} do
+    namespace :v1 do
+      get '/sign_up_chart' => 'charts#sign_up_chart'
+    end
+  end
 
   # Rake Routes
   #                     root GET    /                              users#index
@@ -34,4 +34,6 @@ Rails.application.routes.draw do
   #                          PATCH  /users/:id(.:format)           users#update
   #                          PUT    /users/:id(.:format)           users#update
   #                          DELETE /users/:id(.:format)           users#destroy
+  # api_v1_sign_up_chart GET    /api/v1/sign_up_chart(.:format) api/v1/charts#sign_up_chart {:format=>:json}
+ 
 end
