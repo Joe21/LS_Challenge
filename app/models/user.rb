@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_and_belongs_to_many :games
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -20,6 +22,5 @@ class User < ActiveRecord::Base
 				errors.add :password, "must include 1 uppercase, 1 lowercase, 1 digit, and 1 special character"
 			end
   	end
-  end
-
-end
+  end # <-------end of password_complexity method
+end 
