@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 	before_action :return_user, only: [:edit, :update]
 
 	def index
-		@users = User.all
+		@users = User.order('id ASC')
 	end
 
 	def edit
@@ -15,6 +15,10 @@ class UsersController < ApplicationController
 		else
 			render :action => :edit
 		end
+	end
+
+	def chart_data
+		
 	end
 
 	# --------------------------------------------------------
