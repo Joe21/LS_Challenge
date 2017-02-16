@@ -7,3 +7,4 @@ User.create! email: "greenlantern@gmail.com", password: "Password!1", password_c
 User.create! email: "flash@gmail.com", password: "Password!1", password_confirmation: "Password!1", created_at: Time.now - 4.day
 User.create! email: "cyborg@gmail.com", password: "Password!1", password_confirmation: "Password!1", created_at: Time.now - 5.day
 User.create! email: "martianmanhunter@gmail.com", password: "Password!1", password_confirmation: "Password!1", created_at: Time.now - 5.day
+
