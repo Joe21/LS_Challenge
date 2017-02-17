@@ -1,5 +1,5 @@
-<table>
-	<thead>
+<table class="table table-striped text-left">
+	<thead class="thead-inverse">
 		<tr>
 			<th>ID</th>
 			<th>Email</th>
@@ -9,23 +9,27 @@
 		</tr>
 	</thead>
 
-	<% @users.each do |user| %>
-	<tr>
-		<td><%= user.id %></td>
-		<td><%= user.email %></td>
-		<td><%= user.name %></td>
-		<td>
-			<% if user.game %>
-			<%= user.game.name %>
-			<% end %>
-		</td>
-		<td><%= link_to "Edit", edit_user_path(user.id) %></td>
-	</tr>
-
-	<% end %>
+	<tbody>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.id %></td>
+			<td><%= user.email %></td>
+			<td><%= user.name %></td>
+			<td>
+				<% if user.game %>
+				<%= user.game.name %>
+				<% end %>
+			</td>
+			<td><%= link_to "Edit", edit_user_path(user.id) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+	
 </table>
 
-</br>
+</br></br>
+<hr>
+</br></br></br>
 
 <div >
 	<canvas id="signUpChart" width="500" height="300"></canvas>
