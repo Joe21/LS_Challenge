@@ -1,0 +1,27 @@
+<h1>All Games</h1>	
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>View/Edit</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+
+	<% @games.each do |game| %>
+	<tr>
+		<td><%= game.name %></td>
+		<td>
+      <%= link_to 'View/Edit', game_path(game.id) %>
+    </td>
+    <td>
+      <%= link_to 'Delete', game, :method => 'delete' %>
+    </td>
+	</tr>
+	<% end %>
+</table>
+
+<p><%= link_to 'Enter New Game', new_game_path %></p>
+</br></br>
+<%= link_to "Home", users_path %>
