@@ -1,15 +1,10 @@
 class UsersController < ApplicationController
 	before_action :authenticate_user!
 	before_action :return_user, only: [:edit, :update]
-	require 'pp'
 
 	def index
 		# ensure editted users do not overlap order vs .all
 		@users = User.order(id: :asc)
-
-		puts "===================================="
-		pp User.first.game.name
-		puts "===================================="
 	end
 
 	def edit
@@ -31,7 +26,7 @@ class UsersController < ApplicationController
 	end
 
 	def user_params
-		params.require(:user).permit(:name, :fav_game)
+		params.require(:user).permit(:name, :game_id)
 	end
 
 end

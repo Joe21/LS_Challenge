@@ -11,7 +11,7 @@
 	</div>
 	<div>
 		<div>Favorite Game</div>
-		<div><%= form.text_field :fav_game %></div>
+		<div><%= collection_select(:user, :game_id, Game.all, :id, :name) %></div>
 	</div>
 	<%= form.submit %>
 <% end %>
