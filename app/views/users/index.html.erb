@@ -15,10 +15,8 @@
 		<td><%= user.email %></td>
 		<td><%= user.name %></td>
 		<td>
-			<% if user.game.name %>
+			<% if user.game %>
 			<%= user.game.name %>
-			<% else %>
-			<%= "" %>
 			<% end %>
 		</td>
 		<td><%= link_to "Edit", edit_user_path(user.id) %></td>
