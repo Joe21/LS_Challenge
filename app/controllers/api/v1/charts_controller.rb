@@ -1,18 +1,10 @@
 module Api::V1
 	class ChartsController < ApiController
-		# require 'pp'
-
+		include ChartHelper
 		# GET /v1/sign_up_chart
 		def sign_up_chart
-			data = {}
-			User.order(created_at: :asc).each do |user|
-				if data[user.created_at.strftime('%x')]
-					data[user.created_at.strftime('%x')] += 1
-				elsif !data[user.created_at.strftime('%x')]
-					data[user.created_at.strftime('%x')] = 1
-				end
-			end
-
+			# Populate data using ChartHelper Module
+			data = populate_sign_up_chart
 			respond_to do |format|
 				format.json { render :json => data }
 			end
