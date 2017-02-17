@@ -12,6 +12,15 @@
 - Basic chart on index displays # user sign ups per date
 - Chart must skip days that no users signed up
 
+### Tech Used
+- Ruby 2.2.3
+- Rails 4.2.4
+- PSQL
+- Bootstrap
+- Devise
+- Chart.js
+- Heroku
+
 #### Features and Bonus Implementations
 - Full authentication with flash messaging
 - Robust passwords
@@ -28,3 +37,5 @@
 - Seed file
 - Deployed on Heroku
 - Basic bootstrap styling
+
+
